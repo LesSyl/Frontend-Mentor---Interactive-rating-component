@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+    <title>Frontend Mentor | Interactive rating component</title>
+    <link rel="stylesheet" href="dist/css/main.min.css">
+</head>
+
+<body>
+
+    <div class="card">
+        <img src="dist/img/icon-star.svg" alt="star" class="card__img">
+        <h1 class="card__title"> How did we do?</h1>
+        <p class="card__description">
+            Please let us know how we did with your support request. All feedback is appreciated
+            to help us improve our offering!
+        </p>
+        <ul class="card__evaluation">
+            <li><button class="card__evaluation-number">1</button></li>
+            <li><button class="card__evaluation-number">2</button></li>
+            <li><button class="card__evaluation-number">3</button></li>
+            <li><button class="card__evaluation-number">4</button></li>
+            <li><button class="card__evaluation-number">5</button></li>
+
+        </ul>
+        <button class="card__button">submit</button>
+    </div>
+
+    <div class="card__thanks hidden">
+        <img src="dist/img/illustration-thank-you.svg" alt="" class="card__thanks-img">
+        <p class="card__thanks-choice">You selected  <span class="card__thanks-choice-rating"></span> out of 5</p>
+        <h2 class="card__thanks-you">Thank you!</h2>
+        <p class="card__thanks-text">We appreciate you taking the time to give a
+            rating. If you ever need more support, don’t hesitate to get in touch!
+        </p>
+    </div>
+
+    <div class="popup">
+        <p class="popup__text">To submit please select the grade.</p>
+        <button class="popup__button">Exit</button>
+    </div>
+
+    <!-- @include 'footer.kit' -->
+     <script src="dist/js/main.min.js"></script>
+</body>
+
+</html>

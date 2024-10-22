@@ -1,0 +1,172 @@
+@use 'colors' as *;
+@use 'footer' as *;
+@use 'reset';
+
+:root {
+	--regular-font: 'regular', sans-serif;
+}
+
+@font-face {
+	font-family: 'regular';
+	src: url('../../fonts/overpass-variablefont_wght-webfont.woff2') format('woff2'),
+		url('../../fonts/overpass-variablefont_wght-webfont.woff') format('woff');
+	font-weight: 400, 700;
+	font-style: normal;
+	font-display: swap;
+}
+
+body {
+	position: relative;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	font-family: var(--regular-font);
+	line-height: 1.5;
+	-webkit-font-smoothing: antialiased;
+	background-color: $body-color;
+}
+.card,
+.card__thanks {
+	width: 19em;
+	height: 20em;
+	padding: 1.5em 2em;
+	background-color: $bg-color;
+	border-radius: 1.5em;
+}
+.card__button,
+.popup__button {
+	font-size: 0.8rem;
+	font-weight: 700;
+	letter-spacing: 0.2em;
+	text-transform: uppercase;
+	color: $body-color;
+	background-color: $orange;
+	border: none;
+	border-radius: 3em;
+	cursor: pointer;
+	transition: background-color 0.3s;
+	&:hover {
+		background-color: $white;
+	}
+}
+
+.card {
+	&__img {
+		padding: 0.5em;
+		margin-bottom: 1em;
+		border-radius: 50%;
+		background-color: $num-color;
+	}
+	&__title {
+		margin: 0.5em auto;
+		font-size: 1.2rem;
+		font-weight: 400;
+		color: $white;
+	}
+	&__description {
+		font-size: 0.7rem;
+		line-height: 1.8;
+		color: $description-color;
+	}
+	&__evaluation {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		li {
+			list-style: none;
+		}
+		&-number {
+			width: 2em;
+			height: 2em;
+			margin: 1.3em auto;
+			font-size: 1rem;
+			border-radius: 50%;
+			border: none;
+			color: $description-color;
+			background-color: $num-color;
+			cursor: pointer;
+			transition: background-color 0.3s, color 0.3s;
+			&:hover {
+				color: $body-color;
+				background-color: $orange;
+			}
+			&:focus {
+				color: $bg-color;
+				background-color: $white;
+			}
+		}
+	}
+	&__button {
+		width: 100%;
+		padding: 0.7em;
+	}
+	&__thanks {
+		position: absolute;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		&-choice {
+			margin: 2em auto 1em auto;
+			padding: 0.2em 0.7em;
+			font-size: 0.8rem;
+			border: none;
+			border-radius: 1.5em;
+			color: $choice-color;
+			background-color: $num-color;
+		}
+		&-you {
+			margin-bottom: 0.5em;
+			font-size: 1.2rem;
+			font-weight: 400;
+			letter-spacing: 0.1em;
+			color: $white;
+		}
+		&-text {
+			font-size: 0.9rem;
+			text-align: center;
+			color: $description-color;
+		}
+	}
+}
+.hidden {
+	display: none;
+}
+
+.popup {
+	position: absolute;
+	display: none;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	height: 10em;
+	width: 21em;
+	background-color: $bg-color;
+	border: 1px solid $num-color;
+	border-radius: 1em;
+	animation: show 1s;
+
+	&__text {
+		color: $white;
+	}
+	&__button {
+		height: 2em;
+		width: 6em;
+		margin-top: 1em;
+		text-align: center;
+		line-height: 2em;
+	}
+}
+@keyframes show {
+	from {
+		transform: translateY(-40em);
+	}
+	to {
+		transform: translateY(0);
+	}
+}
+.show {
+	display: flex;
+}
