@@ -28,8 +28,8 @@ Mobile
 ### Links
 
 - Repository URL:[GitHub](https://github.com/LesSyl/Interactive-rating-component)
-- Solution URL: [Frontendmentor]()
-- Live Site URL: [Live](https://lessyl.github.io/Interactive-rating-component/)
+- Solution URL: [Frontendmentor](https://www.frontendmentor.io/solutions/interactive-rating-component-solution--ocInsrAH3)
+- Live Site URL: [Live](https://lessyl.github.io/Frontend-Mentor---Interactive-rating-component/)
 ## My process
 
 ### Built with
